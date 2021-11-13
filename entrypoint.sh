@@ -2,6 +2,7 @@
 set -e
 
 cd ${GITHUB_WORKSPACE}
+export PYLINTRC=/.pylintrc
 
 # --- Parameters --- #
 # $1: scan-folders
