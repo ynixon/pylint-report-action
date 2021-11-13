@@ -9,6 +9,7 @@ set -e
 echo "#################################################"
 echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 
+mkdir $(dirname "$3")
 pylint "$1" "$2"| pylint_report.py > "$3"
 
 echo "#################################################"
