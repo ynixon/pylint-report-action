@@ -11,6 +11,7 @@ echo "Starting ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 
 mkdir $(dirname "$3")
 echo -e "pylint \"$1\" \"$2\" \| pylint_report.py \> \"$3\""
+ls -la
 pylint "$1" "$2"| pylint_report.py > "$3"
 
 echo "#################################################"
