@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+cd ${GITHUB_WORKSPACE}
+
 # --- Parameters --- #
 # $1: scan-folders
 # $2: override parametewrs
