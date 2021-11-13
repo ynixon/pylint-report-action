@@ -13,7 +13,7 @@ inputs:
   override-parametewrs:
     description: 'override parameters'
     required: false
-    default: ''
+    default: ' '
   html-file:
     description: 'html report file name'
     required: false
