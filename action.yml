@@ -1,0 +1,27 @@
+name: pylint-report-action
+author: Yossi Nixon
+description: Lint python projects with pylint. The build will fail on violations.
+branding:
+  color: 'gray-dark'
+  icon: 'check-circle'
+
+inputs:
+  scan-folders:
+    description: 'directory to run linting on'
+    required: true
+    default: '.'
+  override-parametewrs:
+    description: 'override parameters'
+    required: false
+    default: ''
+  html-file:
+    description: 'html report file name'
+    required: false
+    default: 'report.html'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.scan-folders }}
+    - ${{ inputs.override-parametewrs }}
+    - ${{ inputs.html-file }}
