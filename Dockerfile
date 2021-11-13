@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9
 RUN pip3 install pylint pylint-report
 RUN python --version ; pip --version ; pylint --version
 COPY entrypoint.sh /
