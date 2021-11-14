@@ -22,3 +22,4 @@ pylint_report.py report.json --html-file $3
 echo "#################################################"
 echo "Completed ${GITHUB_WORKFLOW}:${GITHUB_ACTION}"
 echo -e "Exist Status=${exit_status}"
+exit ${exit_status}
