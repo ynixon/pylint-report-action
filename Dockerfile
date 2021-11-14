@@ -8,6 +8,6 @@ RUN pip install --upgrade pip
 RUN pip3 install pylint pylint-report
 WORKDIR /app
 
-COPY --chown=appuser:appuser .pylintrc entrypoint.sh /app/
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/app/entrypoint.sh"]
+COPY --chown=appuser:appuser .pylintrc entrypoint.sh $HOME
+RUN chmod +x $HOME/entrypoint.sh
+ENTRYPOINT ["$HOME/entrypoint.sh"]
