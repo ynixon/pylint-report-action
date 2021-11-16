@@ -10,7 +10,7 @@ inputs:
     description: 'directory to run linting on'
     required: true
     default: '.'
-  override-parametewrs:
+  override-parameters:
     description: 'override parameters'
     required: false
     default: ' '
@@ -23,5 +23,5 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.scan-folders }}
-    - ${{ inputs.override-parametewrs }}
+    - ${{ inputs.override-parameters }}
     - ${{ inputs.html-file }}
